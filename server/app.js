@@ -8,7 +8,7 @@ const fileUpload = require("express-fileupload");
 const errorMiddleware = require("./middlewares/errors");
 app.use(cors(
   {
-    origin: ['https://food-app.vercel.app'],
+    origin: ['https://food-app-server-self.vercel.app/'],
     method: ['POST', 'GET'],
     credentials: true
   }
