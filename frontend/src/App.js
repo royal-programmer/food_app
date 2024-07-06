@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     store.dispatch(loadUser());
     async function getStripeApiKey() {
-      const { data } = await axios.get("/api/v1/stripeapi");
+      const { data } = await axios.get("food-app-server-self.vercel.app");
       setStripeApiKey(data.stripeApiKey);
     }
     getStripeApiKey();
