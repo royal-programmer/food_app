@@ -7,7 +7,7 @@ const ErrorHandler = require("./utils/errorHandler");
 app.use(cors(
   {
     origin: ['https://food-bx3zxtr0w-royal-programmers-projects.vercel.app'],
-    method: ['POST', 'GET'],
+    methods: ['POST', 'GET'],
     credentials: true
   }
 ))
