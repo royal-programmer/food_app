@@ -58,13 +58,13 @@ app.get('/', (req, res) => {
   res.send(htmlContent);
 });
 
-// app.use(cors(
-//   {
-//     origin: ['https://food-app.vercel.app'],
-//     method: ['POST', 'GET'],
-//     credentials: true
-//   }
-// ))
+app.use(cors(
+  {
+    origin: ['https://food-bx3zxtr0w-royal-programmers-projects.vercel.app'],
+    method: ['POST', 'GET'],
+    credentials: true
+  }
+))
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({

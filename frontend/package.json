@@ -55,9 +55,9 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:4000",
+  "proxy": "https://food-app-server-tau.vercel.app/",
 
-  
+
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
