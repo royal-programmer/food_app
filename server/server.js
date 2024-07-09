@@ -4,6 +4,14 @@ const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
 const ErrorHandler = require("./utils/errorHandler");
 
+app.use(cors(
+  {
+    origin: ['https://food-bx3zxtr0w-royal-programmers-projects.vercel.app'],
+    method: ['POST', 'GET'],
+    credentials: true
+  }
+))
+
 process.on("uncaughtException", (err) => {
   console.log("ERROR: " + err.stack);
   console.log("Shutting down server due to uncaught exception");
