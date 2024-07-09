@@ -64,7 +64,7 @@ app.use(cors(
     method: ['POST', 'GET'],
     credentials: true
   }
-))
+));
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({
