@@ -5,11 +5,11 @@ const cloudinary = require("cloudinary");
 const ErrorHandler = require("./utils/errorHandler");
 
 app.use(cors(
-  {
-    origin: ['https://royal-programming-food-app.vercel.app'],
-    method: ["POST", "GET"],
-    credentials: true
-  }
+    {
+        origin: ["https://royal-programming-food-app.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
 ));
 
 process.on("uncaughtException", (err) => {
