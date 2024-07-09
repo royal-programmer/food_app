@@ -6,11 +6,11 @@ const ErrorHandler = require("./utils/errorHandler");
 
 app.use(cors(
   {
-    origin: ['https://food-bx3zxtr0w-royal-programmers-projects.vercel.app'],
-    methods: ['POST', 'GET'],
+    origin: ['https://royal-programming-food-app.vercel.app'],
+    methods: ["POST", "GET"],
     credentials: true
   }
-))
+));
 
 process.on("uncaughtException", (err) => {
   console.log("ERROR: " + err.stack);
