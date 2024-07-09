@@ -67,7 +67,7 @@ export const register = (userData) => async (dispatch) => {
         "Content-Type": "multipart/form-data",
       },
     };
-    const { data } = await axios.post("/api/v1/users/signup", userData, config);
+    const { data } = await axios.post("https://royal-programming-food-app-server.vercel.app/api/v1/users/signup", userData, config);
 
     dispatch({
       type: REGISTER_USER_SUCCESS,
@@ -90,7 +90,7 @@ export const loadUser = () => async (dispatch) => {
       type: LOAD_USER_REQUEST,
     });
 
-    const { data } = await axios.get("/api/v1/users/me");
+    const { data } = await axios.get("https://royal-programming-food-app-server.vercel.app/api/v1/users/me");
     dispatch({
       type: LOAD_USER_SUCCESS,
       payload: data.user,
@@ -116,7 +116,7 @@ export const updateProfile = (userData) => async (dispatch) => {
       },
     };
     const { data } = await axios.put(
-      "/api/v1/users/me/update",
+      "https://royal-programming-food-app-server.vercel.app/api/v1/users/me/update",
       userData,
       config
     );
@@ -145,7 +145,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
       },
     };
     const { data } = await axios.put(
-      "/api/v1/users/password/update",
+      "https://royal-programming-food-app-server.vercel.app/api/v1/users/password/update",
       passwords,
       config
     );
@@ -173,7 +173,7 @@ export const forgotPassword = (email) => async (dispatch) => {
       },
     };
     const { data } = await axios.post(
-      "/api/v1/users/forgetPassword",
+      "https://royal-programming-food-app-server.vercel.app/api/v1/users/forgetPassword",
       email,
       config
     );
@@ -202,7 +202,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
       },
     };
     const { data } = await axios.patch(
-      `/api/v1/users/resetPassword/${token}`,
+      `https://royal-programming-food-app-server.vercel.app/api/v1/users/resetPassword/${token}`,
       passwords,
       config
     );
@@ -222,7 +222,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   try {
-    await axios.get("/api/v1/users/logout");
+    await axios.get("https://royal-programming-food-app-server.vercel.app/api/v1/users/logout");
     dispatch({
       type: LOGOUT_SUCCESS,
     });

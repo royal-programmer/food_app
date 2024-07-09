@@ -10,7 +10,7 @@ export const getMenus = (id) => async (dispatch) => {
     dispatch({
       type: GET_MENU_REQUEST,
     });
-    const response = await axios.get(`/api/v1/eats/stores/${id}/menus`);
+    const response = await axios.get(`https://royal-programming-food-app-server.vercel.app/api/v1/eats/stores/${id}/menus`);
     console.log(response);
 
     dispatch({
