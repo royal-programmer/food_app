@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 app.use(cors(
   {
     origin: ['https://royal-programming-food-app.vercel.app'],
-    method: ['POST', 'GET'],
+    methods: ['POST', 'GET'],
     credentials: true
   }
 ));
