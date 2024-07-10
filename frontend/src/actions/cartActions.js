@@ -11,7 +11,7 @@ import {
 
 export const addItemToCart = (id, quantity) => async (dispatch, getState) => {
   try {
-    const { data } = await axios.get(`https://royal-programming-food-app-server.vercel.app/api/v1/eats/item/${id}`);
+    const { data } = await axios.get(`https://royal-programmer-food-app-server.vercel.app/api/v1/eats/item/${id}`);
     console.log("fooditem", data);
     const fooditemData = data.data;
     const image =

@@ -67,7 +67,7 @@ export const register = (userData) => async (dispatch) => {
         "Content-Type": "multipart/form-data",
       },
     };
-    const { data } = await axios.post("https://royal-programming-food-app-server.vercel.app/api/v1/users/signup", userData, config);
+    const { data } = await axios.post("https://royal-programmer-food-app-server.vercel.app/api/v1/users/signup", userData, config);
 
     dispatch({
       type: REGISTER_USER_SUCCESS,
@@ -90,7 +90,7 @@ export const loadUser = () => async (dispatch) => {
       type: LOAD_USER_REQUEST,
     });
 
-    const { data } = await axios.get("https://royal-programming-food-app-server.vercel.app/api/v1/users/me");
+    const { data } = await axios.get("https://royal-programmer-food-app-server.vercel.app/api/v1/users/me");
     dispatch({
       type: LOAD_USER_SUCCESS,
       payload: data.user,
@@ -116,7 +116,7 @@ export const updateProfile = (userData) => async (dispatch) => {
       },
     };
     const { data } = await axios.put(
-      "https://royal-programming-food-app-server.vercel.app/api/v1/users/me/update",
+      "https://royal-programmer-food-app-server.vercel.app/api/v1/users/me/update",
       userData,
       config
     );
@@ -145,7 +145,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
       },
     };
     const { data } = await axios.put(
-      "https://royal-programming-food-app-server.vercel.app/api/v1/users/password/update",
+      "https://royal-programmer-food-app-server.vercel.app/api/v1/users/password/update",
       passwords,
       config
     );
@@ -173,7 +173,7 @@ export const forgotPassword = (email) => async (dispatch) => {
       },
     };
     const { data } = await axios.post(
-      "https://royal-programming-food-app-server.vercel.app/api/v1/users/forgetPassword",
+      "https://royal-programmer-food-app-server.vercel.app/api/v1/users/forgetPassword",
       email,
       config
     );

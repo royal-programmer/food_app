@@ -16,7 +16,7 @@ export const getRestaurants =
     try {
       dispatch({ type: ALL_RESTAURANTS_REQUEST });
       // let link = "/api/v1/eats/stores";
-      let link = `https://royal-programming-food-app-server.vercel.app/api/v1/eats/stores?keyword=${keyword}`;
+      let link = `https://royal-programmer-food-app-server.vercel.app/api/v1/eats/stores?keyword=${keyword}`;
       const { data } = await axios.get(link);
       const { restaurants, count } = data;
 

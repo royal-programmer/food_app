@@ -26,7 +26,7 @@ export const createOrder = (order) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.post("https://royal-programming-food-app-server.vercel.app/api/v1/eats/orders/new", order, config);
+    const { data } = await axios.post("https://royal-programmer-food-app-server.vercel.app/api/v1/eats/orders/new", order, config);
     dispatch({
       type: CREATE_ORDER_SUCCESS,
       payload: data,
@@ -46,7 +46,7 @@ export const myOrders = () => async (dispatch) => {
       type: MY_ORDER_REQUEST,
     });
 
-    const { data } = await axios.get("https://royal-programming-food-app-server.vercel.app/api/v1/eats/orders/me/myOrders");
+    const { data } = await axios.get("https://royal-programmer-food-app-server.vercel.app/api/v1/eats/orders/me/myOrders");
     dispatch({
       type: MY_ORDER_SUCCESS,
       payload: data.orders,
@@ -66,7 +66,7 @@ export const getOrderDetails = (id) => async (dispatch) => {
       type: ORDER_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`https://royal-programming-food-app-server.vercel.app/api/v1/eats/orders/${id}`);
+    const { data } = await axios.get(`https://royal-programmer-food-app-server.vercel.app/api/v1/eats/orders/${id}`);
     dispatch({
       type: ORDER_DETAILS_SUCCESS,
       payload: data.order,
