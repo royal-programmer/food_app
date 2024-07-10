@@ -56,7 +56,7 @@
     ]
   },
   
-  "proxy": "https://royal-programming-food-app-server.vercel.app",
+  "proxy": "https://royal-programmer-food-app-server.vercel.app",
 
 
   "devDependencies": {
